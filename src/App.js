@@ -42,6 +42,9 @@ function App() {
             <ResultWrap>
               <div className='city'>{result.data.name}</div>
               <div className='temp'>현재온도 : {Math.round(result.data.main.temp - 273.13)}도</div>
+              <div className='feels'>체감온도 : {Math.round(result.data.main.feels_like - 273.13)}도</div>
+              <div className='temp__min'>최저온도 : {Math.round(result.data.main.temp_min - 273.13)}도</div>
+              <div className='temp__max'>최고온도 : {Math.round(result.data.main.temp_max - 273.13)}도</div>
               <div className='sky'>날씨상태 : {result.data.weather[0].main}</div>
             </ResultWrap>
           )
